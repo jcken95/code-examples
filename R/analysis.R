@@ -6,3 +6,11 @@ mtcars |>
   ggplot(aes(x = wt)) +
   geom_histogram()
 
+f <- function(x) {
+  mtcars |>
+    # TODO: turn into a function which uses the number of cyl as an arg (#2)
+    filter(cyl == x) |>
+    ggplot(aes(x = wt)) +
+    geom_histogram()
+}
+
